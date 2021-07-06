@@ -84,6 +84,9 @@ class Settings(BaseSettings):
     ipfs_cluster_uri: str = "http://0.0.0.0:9099"
     ipfs_cluster_replication_factor: int = 2
 
+    # ethereum client
+    ethereum_network_uri: str = "http://127.0.0.1:7545"
+
     class Config:
         case_sensitive = False
         env_file = os.path.join(dirname(dirname(abspath(__file__))), ".env")
